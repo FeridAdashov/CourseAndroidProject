@@ -5,5 +5,8 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.CourseAndroidProject" parent="Base.Theme.CourseAndroidProject" />
+    <style name="Theme.CourseAndroidProject" parent="Base.Theme.CourseAndroidProject" >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

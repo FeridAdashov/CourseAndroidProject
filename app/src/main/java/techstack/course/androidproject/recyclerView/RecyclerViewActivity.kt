@@ -5,6 +5,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import techstack.course.androidproject.databinding.ActivityRecyclerViewBinding
+import java.lang.ref.SoftReference
+import java.lang.ref.WeakReference
+
 
 class RecyclerViewActivity : AppCompatActivity() {
     private val mAdapter: BookingsAdapter by lazy {
@@ -36,6 +39,33 @@ class RecyclerViewActivity : AppCompatActivity() {
         binding = ActivityRecyclerViewBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+
+        var data: String? = "This is some data"
+        val softReference = WeakReference(data)
+
+        // Access the value through the SoftReference
+
+        // Access the value through the SoftReference
+        var retrievedData = softReference.get()
+        println("Retrieved data: $retrievedData")
+
+        // Set data to null, making it eligible for garbage collection
+
+        // Set data to null, making it eligible for garbage collection
+        data = null
+
+        // Force garbage collection (for illustration purposes)
+
+        // Force garbage collection (for illustration purposes)
+        System.gc()
+
+        // Try to retrieve the data again
+
+        // Try to retrieve the data again
+        retrievedData = softReference.get()
+        println("Retrieved data after GC: $retrievedData")
+
 
         binding.bookingsRecyclerView.apply {
             layoutManager =
