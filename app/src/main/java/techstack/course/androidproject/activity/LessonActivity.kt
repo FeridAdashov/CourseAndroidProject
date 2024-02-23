@@ -1,4 +1,4 @@
-package techstack.course.androidproject
+package techstack.course.androidproject.activity
 
 import android.os.Bundle
 import android.os.Parcelable
@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import kotlinx.parcelize.Parcelize
+import techstack.course.androidproject.R
 import techstack.course.androidproject.databinding.ActivityLessonBinding
 
 

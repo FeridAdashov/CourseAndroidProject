@@ -1,4 +1,4 @@
-package techstack.course.androidproject
+package techstack.course.androidproject.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

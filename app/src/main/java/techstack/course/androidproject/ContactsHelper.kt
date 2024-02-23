@@ -8,6 +8,7 @@ import android.provider.ContactsContract
 import androidx.loader.app.LoaderManager
 import androidx.loader.content.CursorLoader
 import androidx.loader.content.Loader
+import techstack.course.androidproject.activity.DataModel
 
 val PROJECTION: Array<out String> = arrayOf(
     ContactsContract.Contacts._ID,

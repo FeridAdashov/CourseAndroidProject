@@ -79,7 +79,7 @@
 //
 ///*
 
-package techstack.course.androidproject
+package techstack.course.androidproject.activity
 
 import android.content.Context
 import android.content.pm.PackageManager
@@ -99,6 +99,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.loader.app.LoaderManager
+import techstack.course.androidproject.ContactsLoader
+import techstack.course.androidproject.R
 import techstack.course.androidproject.databinding.ActivityMainBinding
 
 

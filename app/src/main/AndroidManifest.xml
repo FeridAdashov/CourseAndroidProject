@@ -13,7 +13,7 @@
         android:theme="@style/Theme.CourseAndroidProject"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".LessonActivity"
+            android:name=".activity.LessonActivity"
             android:exported="true"
             android:label="@string/title_activity_lesson"
             android:theme="@style/Theme.CourseAndroidProject" >
@@ -35,7 +35,7 @@
 <!--            </intent-filter>-->
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
 
             <!-- <intent-filter> -->
@@ -46,7 +46,7 @@
             <!-- </intent-filter> -->
         </activity>
         <activity
-            android:name=".MainActivity3"
+            android:name=".activity.MainActivity3"
             android:exported="true">
 
             <!-- <intent-filter> -->
@@ -57,7 +57,7 @@
             <!-- </intent-filter> -->
         </activity>
 
-        <activity android:name=".DataActivity"/>
+        <activity android:name=".activity.DataActivity"/>
     </application>
 
 </manifest>

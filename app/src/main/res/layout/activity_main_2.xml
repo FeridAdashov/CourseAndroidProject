@@ -20,7 +20,7 @@
             android:background="@drawable/shape_gradient_screen_back"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            tools:context=".MainActivity">
+            tools:context=".activity.MainActivity">
 
             <include
                 android:id="@+id/toolBar"
