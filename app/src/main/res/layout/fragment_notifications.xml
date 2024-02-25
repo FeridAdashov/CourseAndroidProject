@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/listViewContacts"
     android:layout_width="match_parent"
@@ -7,7 +7,8 @@
     android:background="#405E6B"
     android:dividerHeight="20dp"
     android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="10dp"
+    android:gravity="center">
 
     <ImageView
         android:id="@+id/btnBack"
@@ -17,9 +18,26 @@
         app:tint="@color/white" />
 
     <TextView
+        android:id="@+id/data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="NOTIFICATIONS"
         android:textColor="@color/white" />
-</RelativeLayout>
+
+    <TextView
+        android:id="@+id/data2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="NOTIFICATIONS"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/data3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="NOTIFICATIONS"
+        android:textColor="@color/white" />
+</LinearLayout>
