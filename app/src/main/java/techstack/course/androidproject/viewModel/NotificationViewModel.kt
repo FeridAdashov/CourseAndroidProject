@@ -31,3 +31,23 @@ class NotificationViewModel : ViewModel() {
         }
     }
 }
+
+/**
+ *         1. Teacher class
+ *         2. name, surname, age
+ *         3. recyclerview
+ *         4. fake function to get teachers list
+ *         5. viewModel
+ *         6. livedata
+ *         7. average of ages
+ */
+
+
+
+
+
+
+
+
+
+

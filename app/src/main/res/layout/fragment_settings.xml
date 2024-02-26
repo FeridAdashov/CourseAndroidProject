@@ -5,19 +5,14 @@
     android:layout_height="match_parent"
     android:background="#03A9F4"
     android:dividerHeight="20dp"
+    android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp">
 
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:textSize="26sp"/>
-
     <Button
-        android:id="@+id/btnClickMe"
+        android:id="@+id/btnGoToTeachersPage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click me"/>
+        android:text="Go to teachers' page" />
 </LinearLayout>

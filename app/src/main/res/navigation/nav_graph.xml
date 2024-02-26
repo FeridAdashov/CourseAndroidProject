@@ -35,7 +35,16 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="techstack.course.androidproject.navigationLesson.SettingsFragment"
-        android:label="SettingsFragment" />
+        android:label="SettingsFragment">
+        <action
+            android:id="@+id/action_settingsFragment_to_teachersFragment"
+            app:destination="@id/teachersFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/teachersFragment"
+        android:name="techstack.course.androidproject.navigationLesson.TeachersPageFragment"
+        android:label="TeachersPageFragment" />
 
     <fragment
         android:id="@+id/notificationsFragment"
