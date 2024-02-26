@@ -19,7 +19,6 @@ class LessonActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         window.navigationBarColor = ContextCompat.getColor(this, R.color.white)
 
         binding = ActivityLessonBinding.inflate(layoutInflater)

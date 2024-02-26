@@ -1,9 +1,7 @@
 package techstack.course.androidproject.navigationLesson
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
@@ -30,7 +28,6 @@ class TeachersPageFragment : Fragment(R.layout.fragment_teachers) {
 
         binding = FragmentTeachersBinding.bind(view)
 
-
         binding.teachersRecyclerView.apply {
             layoutManager = LinearLayoutManager(
                 requireContext(), LinearLayoutManager.VERTICAL, false
@@ -40,10 +37,12 @@ class TeachersPageFragment : Fragment(R.layout.fragment_teachers) {
 
         teachersViewModel.teachersScreenStateLiveData.observe(viewLifecycleOwner) {
             binding.progressIndicator.isGone = true
+            binding.tvError.isGone = true
 
             when (it) {
                 is TeachersViewModel.TeachersScreenState.ErrorState -> {
-                    Toast.makeText(requireContext(), it.message, Toast.LENGTH_LONG).show()
+                    binding.tvError.isVisible = true
+                    binding.tvError.text = it.message
                 }
 
                 TeachersViewModel.TeachersScreenState.LoadingState -> {

@@ -35,6 +35,7 @@ class TeachersViewModel : ViewModel() {
         }
     }
 
+    //State Machine
     sealed class TeachersScreenState {
         data object LoadingState : TeachersScreenState()
         data class ResultState(val teachers: List<TeacherEntityItem>) : TeachersScreenState()

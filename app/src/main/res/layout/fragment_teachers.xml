@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".recyclerView.RecyclerViewActivity">
 
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ic_launcher_cat_background"
+        android:textSize="32sp" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/teachersRecyclerView"
         android:layout_width="match_parent"
