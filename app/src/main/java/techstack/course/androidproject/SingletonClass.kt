@@ -10,7 +10,6 @@ class SingletonClass private constructor(var x: Int) {
         fun getInstance(): SingletonClass {
             synchronized(this) {
                 if (_INSTANCE == null) {
-                    Log.d("SSSSSSS", "SINGLETON")
                     _INSTANCE = SingletonClass(0)
                 }
             }

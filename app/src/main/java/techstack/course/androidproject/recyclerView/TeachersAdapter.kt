@@ -29,4 +29,8 @@ class TeachersAdapter : RecyclerView.Adapter<TeacherDataHolder>() {
     }
 
     override fun getItemCount() = models.size
+
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
 }

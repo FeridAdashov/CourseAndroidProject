@@ -9,10 +9,6 @@ class TeacherDataHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(entityItem: TeacherEntityItem) {
-        binding.run {
-            tvName.text = entityItem.name
-            tvSurname.text = entityItem.surname
-            tvAge.text = "${entityItem.age}"
-        }
+        binding.data = entityItem
     }
 }
