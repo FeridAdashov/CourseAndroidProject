@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_cat"
         android:label="@string/app_name"
@@ -12,11 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CourseAndroidProject"
         android:usesCleartextTraffic="true">
+
         <activity
             android:name=".activity.LessonActivity"
             android:exported="true"
             android:label="@string/title_activity_lesson"
-            android:theme="@style/Theme.CourseAndroidProject" >
+            android:theme="@style/Theme.CourseAndroidProject">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,11 +30,11 @@
         <activity
             android:name=".recyclerView.RecyclerViewActivity"
             android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".activity.MainActivity"
@@ -57,7 +59,7 @@
             <!-- </intent-filter> -->
         </activity>
 
-        <activity android:name=".activity.DataActivity"/>
+        <activity android:name=".activity.DataActivity" />
     </application>
 
 </manifest>

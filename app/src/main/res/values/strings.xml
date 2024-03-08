@@ -58,4 +58,7 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
     <string name="person">Person</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
+    <string name="add_teacher">Add teacher</string>
 </resources>

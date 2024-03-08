@@ -8,6 +8,8 @@ import androidx.navigation.findNavController
 import kotlinx.parcelize.Parcelize
 import techstack.course.androidproject.R
 import techstack.course.androidproject.databinding.ActivityLessonBinding
+import techstack.course.androidproject.dialogs.BaseBottomDialogFragment
+import techstack.course.androidproject.dialogs.TestDialogFragment
 
 
 @Parcelize
@@ -32,6 +34,8 @@ class LessonActivity : AppCompatActivity() {
             }
             true
         }
+
+//        TestDialogFragment().show(supportFragmentManager, "TAG")
     }
 
     private fun changeStartDestination(destinationId: Int) =

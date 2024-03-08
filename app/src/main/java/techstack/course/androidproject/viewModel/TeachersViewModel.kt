@@ -35,6 +35,16 @@ class TeachersViewModel : ViewModel() {
         }
     }
 
+    fun addTeacher(teacher: TeacherEntityItem) {
+        DataUtil.addTeacher(teacher)
+        getTeachers()
+    }
+
+    fun removeTeacher(teacher: TeacherEntityItem) {
+        DataUtil.removeTeacher(teacher)
+        getTeachers()
+    }
+
     //State Machine
     sealed class TeachersScreenState {
         data object LoadingState : TeachersScreenState()
