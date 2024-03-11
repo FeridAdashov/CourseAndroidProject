@@ -1,12 +1,16 @@
 package techstack.course.androidproject.recyclerView
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import kotlin.random.Random
 
+@Entity
 data class TeacherEntityItem(
-    val name: String,
-    val surname: String,
-    val age: Int,
-    private var id: Int? = null,
+    @ColumnInfo(name = "name") val name: String,
+    @ColumnInfo(name = "surname") val surname: String,
+    @ColumnInfo(name = "age") val age: Int,
+    @PrimaryKey var id: Int? = null,
 ) {
     init {
         id = Random.nextInt()

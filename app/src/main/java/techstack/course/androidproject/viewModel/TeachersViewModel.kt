@@ -7,7 +7,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import techstack.course.androidproject.DataUtil
+import techstack.course.androidproject.DataUtilRoomDatabase
 import techstack.course.androidproject.recyclerView.TeacherEntityItem
 
 class TeachersViewModel : ViewModel() {
@@ -23,7 +23,11 @@ class TeachersViewModel : ViewModel() {
         _teachersLiveData.value = TeachersScreenState.LoadingState
 
         viewModelScope.launch(Dispatchers.IO) {
-            val teachers = DataUtil.getTeachers()
+            //Shared preferences
+//            val teachers = DataUtilSharedPreferences.getTeachers()
+
+            //Room database
+            val teachers = DataUtilRoomDatabase.getTeachers()
 
             withContext(Dispatchers.Main) {
                 if (teachers.isEmpty()) {
@@ -36,13 +40,26 @@ class TeachersViewModel : ViewModel() {
     }
 
     fun addTeacher(teacher: TeacherEntityItem) {
-        DataUtil.addTeacher(teacher)
-        getTeachers()
+//        DataUtilSharedPreferences.addTeacher(teacher)
+        viewModelScope.launch(Dispatchers.IO) {
+            DataUtilRoomDatabase.addTeacher(teacher)
+
+            withContext(Dispatchers.Main) {
+                getTeachers()
+            }
+        }
     }
 
     fun removeTeacher(teacher: TeacherEntityItem) {
-        DataUtil.removeTeacher(teacher)
-        getTeachers()
+//        DataUtilSharedPreferences.removeTeacher(teacher)
+
+        viewModelScope.launch(Dispatchers.IO) {
+            DataUtilRoomDatabase.removeTeacher(teacher)
+
+            withContext(Dispatchers.Main) {
+                getTeachers()
+            }
+        }
     }
 
     //State Machine
