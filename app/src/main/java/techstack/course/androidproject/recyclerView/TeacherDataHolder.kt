@@ -8,7 +8,14 @@ class TeacherDataHolder(
     private val binding: TeacherAdapterItemBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(entityItem: TeacherEntityItem) {
+    fun bind(
+        entityItem: TeacherEntityItem,
+        teachersAdapterListener: TeachersAdapter.TeachersAdapterListener
+    ) {
         binding.data = entityItem
+        binding.cardView.setOnLongClickListener {
+            teachersAdapterListener.onItemLongClick(entityItem)
+            true
+        }
     }
 }

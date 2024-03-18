@@ -6,7 +6,12 @@ import androidx.recyclerview.widget.RecyclerView
 import techstack.course.androidproject.databinding.TeacherAdapterItemBinding
 
 
-class TeachersAdapter : RecyclerView.Adapter<TeacherDataHolder>() {
+class TeachersAdapter(private val teachersAdapterListener: TeachersAdapterListener) :
+    RecyclerView.Adapter<TeacherDataHolder>() {
+
+    interface TeachersAdapterListener {
+        fun onItemLongClick(item: TeacherEntityItem)
+    }
 
     var models: List<TeacherEntityItem> = arrayListOf()
         set(value) {
@@ -25,7 +30,7 @@ class TeachersAdapter : RecyclerView.Adapter<TeacherDataHolder>() {
     }
 
     override fun onBindViewHolder(resultHolder: TeacherDataHolder, position: Int) {
-        resultHolder.bind(models[resultHolder.adapterPosition])
+        resultHolder.bind(models[resultHolder.adapterPosition], teachersAdapterListener)
     }
 
     override fun getItemCount() = models.size

@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import techstack.course.androidproject.recyclerView.TeacherEntityItem
 
-@Database(entities = [TeacherEntityItem::class], version = 1)
+@Database(entities = [TeacherEntityItem::class], version = 2)
 abstract class TeacherDatabase : RoomDatabase() {
     abstract fun teacherDao(): TeacherDao
 }
@@ -25,7 +25,9 @@ class TeacherDb {
                     db = Room.databaseBuilder(
                         context,
                         TeacherDatabase::class.java, "database-name"
-                    ).build()
+                    )
+                        .fallbackToDestructiveMigration()
+                        .build()
                 }
             }
         }

@@ -61,4 +61,5 @@
     <string name="add">Add</string>
     <string name="remove">Remove</string>
     <string name="add_teacher">Add teacher</string>
+    <string name="delete_teacher">Delete teacher</string>
 </resources>

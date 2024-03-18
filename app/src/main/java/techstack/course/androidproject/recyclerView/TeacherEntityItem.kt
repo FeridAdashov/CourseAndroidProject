@@ -13,6 +13,6 @@ data class TeacherEntityItem(
     @PrimaryKey var id: Int? = null,
 ) {
     init {
-        id = Random.nextInt()
+        id = id ?: Random.nextInt(0, 100_000)
     }
 }
