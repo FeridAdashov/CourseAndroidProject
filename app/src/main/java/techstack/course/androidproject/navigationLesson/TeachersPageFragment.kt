@@ -11,6 +11,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.asLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -76,7 +77,7 @@ class TeachersPageFragment : Fragment(R.layout.fragment_teachers) {
         viewLifecycleOwner.lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
 
-                teachersViewModel.teachersScreenStateLiveData.collectLatest {
+                teachersViewModel.teachersScreenStateFlow.collectLatest {
                     uiInitialState()
 
                     when (it) {

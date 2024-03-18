@@ -98,8 +98,11 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:$roomVersion")
 
     // To use Kotlin Symbol Processing (KSP)
-    kapt ("androidx.room:room-compiler:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
 
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$roomVersion")
+
+    //Flow, LiveData lifecycle
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
 }
