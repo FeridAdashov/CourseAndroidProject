@@ -1,4 +1,4 @@
-package techstack.course.androidproject.data.responses
+package techstack.course.androidproject.dataDomain.data.remote.responses
 
 import com.google.gson.annotations.SerializedName
 
@@ -17,8 +17,13 @@ data class FactResponse(
         @SerializedName("ID Year")
         val idYear: Int? = null,
 
+        @SerializedName("year")
         val year: String? = null,
+
+        @SerializedName("population")
         val population: Int? = null,
+
+        @SerializedName("slugNation")
         val slugNation: String? = null
     )
 
@@ -33,9 +38,9 @@ data class FactResponse(
         val sourceDescription: String? = null,
         val datasetName: String? = null,
         val datasetLink: String? = null,
-        val tableid: String? = null,
+        val tableId: String? = null,
         val topic: String? = null,
-        val subtopic: String? = null
+        val subTopic: String? = null
     )
 }
 

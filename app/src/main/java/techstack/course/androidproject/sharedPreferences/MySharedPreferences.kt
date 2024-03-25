@@ -51,7 +51,13 @@ class MySharedPreferences private constructor() {
             )
         }
 
+
+        fun getLang(): String {
+            return preferenceManager?.getString(KEY_LANG, "az") ?: "az"
+        }
+
         private const val KEY_SHARED_PREFERENCE = "KEY_SHARED_PREFERENCE"
         private const val KEY_TEACHERS = "KEY_TEACHERS"
+        private const val KEY_LANG = "LANG"
     }
 }
